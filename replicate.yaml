@@ -1,0 +1,15 @@
+version: "1"
+entrypoint: "app.py"  # Your app file
+predict:
+  - input: "image"     # Model input: Image
+  - input: "garment"   # Garment image input
+  - input: "mask"      # Mask input
+  - output: "tryon_result"  # Output of the model (try-on result)
+requirements:
+  - python=3.10
+  - gradio
+  - torch
+  - diffusers
+  - numpy
+  - Pillow
+  - subprocess
